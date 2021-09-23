@@ -199,7 +199,7 @@ decryptorRequest.addEventListener("click", (e) => {
                   
       `;
     setTimeout(() => {
-      generatedEncryption.innerHTML = "";
+      generatedDecryption.innerHTML = "";
     }, 2000);
     return;
   } else {
