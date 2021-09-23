@@ -26,10 +26,10 @@
       * {
         scroll-behavior: smooth;
       }
-      body {
-        overflow-y: hidden; /* Hide vertical scrollbar */
-        overflow-x: hidden; /* Hide horizontal scrollbar */
-      }
+      /* body {
+        overflow-y: hidden; 
+        overflow-x: hidden; 
+      } */
       .encryptor-scrollbar::-webkit-scrollbar {
         height: 5px;
       }
@@ -62,8 +62,8 @@
         user-select: none;
       }
       .section {
-        height: 100vh;
-        padding-top: 20vh;
+        height: 200vh;
+        padding-top: 25vh;
       }
     </style>
     <title>Password Generator With Encryptor And Decryptor</title>
@@ -115,12 +115,12 @@
             generator-input
             d-flex
             flex-column
-            bg-primary
             p-4
             mt-4
             rounded-3
             overflow-hidden
           "
+          style="background-color: rgb(12, 54, 70)"
         >
           <h1 class="p-2 mb-4 text-center">Password Generator</h1>
           <form action="POST" class="form">
@@ -129,14 +129,7 @@
                 type="number"
                 min="3"
                 max="25"
-                class="
-                  form-control
-                  bg-dark
-                  text-light
-                  border-primary
-                  p-2
-                  text-center
-                "
+                class="form-control bg-dark text-light p-2 text-center border-0"
                 id="length"
                 name="length"
                 placeholder="Length of the Password"
@@ -224,11 +217,11 @@
             generator-input
             d-flex
             flex-column
-            bg-primary
             p-4
             rounded-3
             overflow-hidden
           "
+          style="background-color: rgb(12, 54, 70)"
         >
           <h1 class="p-2 mb-4 text-center">Password Encryptor</h1>
           <form action="POST" class="form">
@@ -239,10 +232,10 @@
                   form-control
                   bg-dark
                   text-light
-                  border-primary
                   p-2
                   text-center
                   bg-dark
+                  border-0
                 "
                 id="password"
                 name="password"
@@ -257,10 +250,10 @@
                   form-control
                   bg-dark
                   text-light
-                  border-primary
                   p-2
                   text-center
                   bg-dark
+                  border-0
                 "
                 id="secret"
                 name="secret"
@@ -307,11 +300,11 @@
             generator-input
             d-flex
             flex-column
-            bg-primary
             p-4
             rounded-3
             overflow-hidden
           "
+          style="background-color: rgb(12, 54, 70)"
         >
           <h1 class="p-2 mb-4 text-center">Password Decryptor</h1>
           <form action="POST" class="form">
@@ -322,10 +315,10 @@
                   form-control
                   bg-dark
                   text-light
-                  border-primary
                   p-2
                   text-center
                   bg-dark
+                  border-0
                 "
                 id="decrypt-password"
                 name="decrypt-password"
@@ -340,10 +333,10 @@
                   form-control
                   bg-dark
                   text-light
-                  border-primary
                   p-2
                   text-center
                   bg-dark
+                  border-0
                 "
                 id="decrypt-secret"
                 name="decrypt-secret"
