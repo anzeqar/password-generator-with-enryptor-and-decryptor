@@ -39,7 +39,6 @@ passwordRequest.addEventListener("click", (e) => {
     const _characters = "`~!@#$%^&*()_+{}|:\"<>?-=[]\\;'/.,";
     let passwordGenerated = "";
     var string = "";
-    console.log(length);
 
     switch (option) {
       case "easy":
@@ -68,9 +67,9 @@ passwordRequest.addEventListener("click", (e) => {
         }
         break;
       default:
-        return console.log("error");
+        passwordGenerated = "Error";
+        break;
     }
-    console.log(passwordGenerated);
     generatedPassword.innerHTML = `
     <p id="generated-password"
                   class="
@@ -107,8 +106,6 @@ encryptorRequest.addEventListener("click", (e) => {
   e.preventDefault();
   let password = document.querySelector("#password");
   let secret = document.querySelector("#secret");
-
-  console.log(password.value, secret.value);
 
   const generatedEncryption = document.querySelector("#generated-encryption");
   if (password.value == "" || secret.value == "") {
@@ -178,8 +175,6 @@ decryptorRequest.addEventListener("click", (e) => {
   let decryptPassword = document.querySelector("#decrypt-password");
   let decryptSecret = document.querySelector("#decrypt-secret");
 
-  console.log(decryptPassword.value, decryptSecret.value);
-
   const generatedDecryption = document.querySelector("#generated-decryption");
 
   if (decryptPassword.value == "" || decryptSecret.value == "") {
@@ -213,7 +208,6 @@ decryptorRequest.addEventListener("click", (e) => {
       String(decryptSecret.value)
     );
     decrypted = decrypted.toString(CryptoJS.enc.Utf8);
-    console.log(decrypted);
     if (decrypted == "") {
       decrypted = "Error: Not an Encrypted Text";
       generatedDecryption.innerHTML = `
